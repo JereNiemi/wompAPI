@@ -14,6 +14,8 @@ model Note {
   note       String?   @db.VarChar
   created_at DateTime? @default(now()) @db.Timestamp(6)
   updated_at DateTime? @default(now()) @db.Timestamp(6)
+  x          Int?      
+  y          Int?   
 
   @@map("notes") // mappar prisma-obj Note till tabellen "notes"
 }
