@@ -14,7 +14,7 @@ console.log(`Node.js ${process.version}`)
 app.use(express.json())
 
 app.get('/', (req, res) => {
-    res.json({ msg: "Lektionsexempel 0.3" })
+    res.json({ msg: "notes API" })
 })
 
 const notesRouter = require('./routes/notes')
