@@ -48,7 +48,9 @@ router.post('/', async (req, res) => {
                 note: req.body.note,
                 author_id: req.authUser.sub,
                 created_at: new Date(),
-                updated_at: new Date()
+                updated_at: new Date(),
+                x: req.body.x,
+                y: req.body.y
             }
         })
         res.status(201).json({ msg: "Note created", note })
