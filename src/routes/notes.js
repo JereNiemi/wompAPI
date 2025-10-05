@@ -71,6 +71,8 @@ router.put('/:id', async (req, res) => {
             where: { id: note.id },
             data: {
                 note: req.body.note || note.note,
+                x: req.body.x !== undefined ? Number(req.body.x) : note.x,
+                y: req.body.y !== undefined ? Number(req.body.y) : note.y,
                 updated_at: new Date()
             }
         })
